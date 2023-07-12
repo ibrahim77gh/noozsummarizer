@@ -17,7 +17,7 @@ const Rockwell = () => {
     const stories = useLoaderData()
     return (
         <Stack mt={7}>
-            <Typography variant='h3'>Rockwell</Typography>
+            <Typography variant='h3'>Lewrockwell</Typography>
             <News stories={stories}/>
         </Stack>
     )

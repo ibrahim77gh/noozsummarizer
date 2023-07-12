@@ -17,7 +17,7 @@ const Hedge = () => {
     const stories = useLoaderData()
     return (
         <Stack mt={7}>
-            <Typography variant='h3'>Hedge</Typography>
+            <Typography variant='h3'>Zerohedge</Typography>
             <News stories={stories}/>
         </Stack>
     )

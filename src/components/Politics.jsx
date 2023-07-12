@@ -1,7 +1,8 @@
 import React from 'react'
+import { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import News from './News'
-import { Typography, Stack } from '@mui/material';
+import { Typography, Stack, CircularProgress, Box } from '@mui/material';
 
 const PoliticsLoader = async () => {
     try {
@@ -16,11 +17,26 @@ const PoliticsLoader = async () => {
 
 const Politics = () => {
     const stories = useLoaderData()
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+      setIsLoading(false)
+    }, [stories])
   return (
-    <Stack mt={7}>
-        <Typography variant='h3'>Seattle Politics</Typography>
-        <News stories={stories}/>
-    </Stack>
+    <>
+      {isLoading ? (
+        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '200px' }}>
+          <CircularProgress size={100} />
+        </Box>
+      ) : (
+        <Stack mt={7}>
+          <Typography variant='h3'>Seattle Politics</Typography>
+          <News stories={stories}/>
+        </Stack>
+      )}
+      
+    </>
+    
   )
 }
 

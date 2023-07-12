@@ -1,7 +1,8 @@
 import React from 'react'
 import News from './News'
 import { useLoaderData } from 'react-router-dom';
-import { Typography, Stack } from '@mui/material';
+import { Typography, Stack} from '@mui/material';
+
 
 const SportsLoader = async () => {
     try {
@@ -15,6 +16,7 @@ const SportsLoader = async () => {
 
 const Sports = () => {
     const stories = useLoaderData()
+
     return (
         <Stack mt={7}>
             <Typography variant='h3'>Seattle Sports</Typography>
