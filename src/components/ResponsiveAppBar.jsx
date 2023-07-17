@@ -79,7 +79,8 @@ const ResponsiveAppBar = () => {
                             >
                                 <Stack direction='column-reverse'>
                                     <NavLink to='sports'><MenuItem onClick={handleCloseNavMenu} sx={{color:'#536872', '&:hover': { color: 'info.main' }}}>Seattle Sports</MenuItem></NavLink>
-                                    <NavLink to='/'><MenuItem onClick={handleCloseNavMenu} sx={{color:'#536872', '&:hover': { color: 'info.main' }}}>Seattle Politics</MenuItem></NavLink>
+                                    <NavLink to='/'><MenuItem onClick={handleCloseNavMenu} sx={{color:'#536872', '&:hover': { color: 'info.main' }}}>Seattle News</MenuItem></NavLink>
+                                    <NavLink to='politics'><MenuItem onClick={handleCloseNavMenu} sx={{color:'#536872', '&:hover': { color: 'info.main' }}}>Seattle Politics</MenuItem></NavLink>
                                     <NavLink to='bussiness'><MenuItem onClick={handleCloseNavMenu} sx={{color:'#536872', '&:hover': { color: 'info.main' }}}>Seattle Bussiness</MenuItem></NavLink>
                                     <NavLink to='hedge'><MenuItem onClick={handleCloseNavMenu} sx={{color:'#536872', '&:hover': { color: 'info.main' }}}>Zerohedge</MenuItem></NavLink>
                                     <NavLink to='rockwell'><MenuItem onClick={handleCloseNavMenu} sx={{color:'#536872', '&:hover': { color: 'info.main' }}}>Lewrockwell</MenuItem></NavLink>
@@ -90,10 +91,11 @@ const ResponsiveAppBar = () => {
                             variant="body1"
                             noWrap
                             component="a"
+                            href="/"
                             sx={{
                             display: { xs: 'flex', md: 'none' },
                             flexGrow: 1,
-                            fontWeight: 300,
+                            fontWeight: 700,
                             letterSpacing: '.1rem',
                             color: 'info.main',
                             textDecoration: 'none',
@@ -108,6 +110,10 @@ const ResponsiveAppBar = () => {
                             </NavLink>
 
                             <NavLink to='/'>
+                                <Button color='info' size='large' onClick={handleCloseNavMenu} sx={{ my: 2, color: '#536872','&:hover': { color: 'info.main' }, display: 'block' }}>Seattle News</Button>
+                            </NavLink>
+
+                            <NavLink to='politics'>
                                 <Button color='info' size='large' onClick={handleCloseNavMenu} sx={{ my: 2, color: '#536872','&:hover': { color: 'info.main' }, display: 'block' }}>Seattle Politics</Button>
                             </NavLink>
                                                         
